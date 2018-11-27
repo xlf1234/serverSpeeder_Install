@@ -60,7 +60,7 @@ function SelectKernel()
 {
 KNN=$(echo $MyKernel |awk -F '/' '{ print $2 }') && [ -z "$KNN" ] && Unstall && echo "Error,Not Matched! " && exit 1
 KNV=$(echo $MyKernel |awk -F '/' '{ print $5 }') && [ -z "$KNV" ] && Unstall && echo "Error,Not Matched! " && exit 1
-wget --no-check-certificate -q -O "/root/appex/apxfiles/bin/acce-"$KNV"-["$KNA"_"$KNN"_"$KNK"]" "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_kernel/master/$MyKernel"
+wget --no-check-certificate -q -O "/root/appex/apxfiles/bin/acce-"$KNV"-["$KNA"_"$KNN"_"$KNK"]" "https://raw.githubusercontent.com/xlf1234/serverSpeeder_kernel/master/$MyKernel"
 [ ! -f "/root/appex/apxfiles/bin/acce-"$KNV"-["$KNA"_"$KNN"_"$KNK"]" ] && Unstall && echo "Download Error,Not Found acce-$KNV-[$KNA_$KNN_$KNK]! " && exit 1
 }
 
@@ -123,7 +123,7 @@ chattr +i /appex/etc/apx.lic
 
 function ServerSpeeder()
 {
-[ ! -f /root/appex.zip ] && wget --no-check-certificate -q -O "/root/appex.zip" "https://raw.githubusercontent.com/0oVicero0/serverSpeeser_Install/master/appex.zip"
+[ ! -f /root/appex.zip ] && wget --no-check-certificate -q -O "/root/appex.zip" "https://raw.githubusercontent.com/xlf1234/serverSpeeser_Install/master/appex.zip"
 [ ! -f /root/appex.zip ] && Unstall && echo "Error,Not Found appex.zip! " && exit 1
 mkdir -p /root/appex
 unzip -o -d /root/appex /root/appex.zip
